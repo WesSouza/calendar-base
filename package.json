@@ -4,12 +4,15 @@
   "description": "Base methods for generating calendars using JavaScript.",
   "main": "lib/calendar-base.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec test/index.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/WesleydeSouza/calendar-base"
   },
   "author": "Wesley de Souza",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
 }
