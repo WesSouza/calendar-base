@@ -10,8 +10,8 @@
     "type": "git",
     "url": "https://github.com/WesleydeSouza/calendar-base"
   },
-  "author": "Wesley de Souza",
-  "license": "ISC",
+  "author": "Wesley de Souza <npm@wesley.so>",
+  "license": "MIT",
   "devDependencies": {
     "mocha": "^2.1.0"
   }
