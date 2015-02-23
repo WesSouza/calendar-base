@@ -1,0 +1,30 @@
+body {
+	font-family: 'Myriad Pro', sans-serif;
+	font-size: 1.2em;
+}
+
+.calendar {
+	padding: 0;
+	list-style: none;
+	width: 280px;
+}
+
+.calendar-day {
+	float: left;
+	text-align: right;
+	width: 40px;
+}
+
+/* Easiest RTL support, imagine with display: flex! */
+html[dir=rtl] .calendar-day {
+	float: right;
+	text-align: left;
+}
+
+.calendar-day.-weekday {
+	font-weight: bold;
+}
+
+.calendar-day.-sibling-month {
+	color: #ccc;
+}
