@@ -2,6 +2,8 @@
 
 Base methods for generating calendars using JavaScript.
 
+Supports IE 6+, Chrome 1+, Firefox 3+, Safari 4+.
+
 
 ## Usage
 ```js
@@ -52,24 +54,30 @@ The object `options` may have the following properties:
 
 Returns the amount of days between `dateOne` and `dateTwo` as a `Number`.
 
-    > Calendar.interval( { year: 2010, month: 0, day: 1 }, { year: 2010, month: 0, day: 10 } );
-    11
+```js
+> Calendar.interval( { year: 2010, month: 0, day: 1 }, { year: 2010, month: 0, day: 10 } );
+11
+```
 
 
 #### `Calendar.daysInMonth( year, month )`
 
 Returns the amount of days in the given month as a `Number`.
 
-    > Calendar.daysInMonth( 2010, 0 );
-    31
+```js
+> Calendar.daysInMonth( 2010, 0 );
+31
+```
 
 
 #### `Calendar.isLeapYear( year )`
 
 Returns whether the given year is a leap year, as a `Boolean`.
 
-    > Calendar.isLeapYear( 2100 );
-    false
+```js
+> Calendar.isLeapYear( 2100 );
+false
+```
 
 
 #### `Calendar.prorotype.getCalendar( year, month )`
@@ -78,13 +86,15 @@ Returns an `Array` of dates with the days from the given month, always starting 
 
 If sibling months is disabled, paddings are added as `false` to align the week days, otherwise the respective days from the previous or next months are included.
 
-    > var cal = new Calendar( { siblingMonths: true } );
-    > cal.getCalendar( 2015, 5 );
-    [ { day: 31, weekDay: 0, month: 4, year: 2015, siblingMonth: true },
-      { day: 1, weekDay: 1, month: 5, year: 2015 },
-      { day: 2, weekDay: 2, month: 5, year: 2015 },
-      ...
-      { day: 4, weekDay: 6, month: 6, year: 2015, siblingMonth: true } ]
+```js
+> var cal = new Calendar( { siblingMonths: true } );
+> cal.getCalendar( 2015, 5 );
+[ { day: 31, weekDay: 0, month: 4, year: 2015, siblingMonth: true },
+  { day: 1, weekDay: 1, month: 5, year: 2015 },
+  { day: 2, weekDay: 2, month: 5, year: 2015 },
+  ...
+  { day: 4, weekDay: 6, month: 6, year: 2015, siblingMonth: true } ]
+```
 
 
 #### `Calendar.prorotype.setDate( date )`
@@ -96,22 +106,28 @@ Alias to `Calendar.prototype.setStartDate`.
 
 Sets the current selected starting date.
 
-    > cal.setStartDate( { year: 2015, month: 0, day: 1 } );
+```js
+> cal.setStartDate( { year: 2015, month: 0, day: 1 } );
+```
 
 
 #### `Calendar.prorotype.setEndDate( date )`
 
 Sets the current selected ending date.
 
-    > cal.setEndDate( { year: 2015, month: 0, day: 31 } );
+```js
+> cal.setEndDate( { year: 2015, month: 0, day: 31 } );
+```
 
 
 #### `Calendar.prorotype.isDateSelected( date )`
 
 Checks wheter the given date is inside the selected dates interval, returns a `Boolean`.
 
-    > cal.isDateSelected( { year: 2015, month: 0, day: 10 } );
-    true
+```js
+> cal.isDateSelected( { year: 2015, month: 0, day: 10 } );
+true
+```
 
 
 ## License
