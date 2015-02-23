@@ -33,7 +33,7 @@ Every returned day or date argument follows this notation:
 }
 ```
 
-Properties `month` and `weekDay` respect JavaScript’s [`Date.prorotype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype).
+Properties `month` and `weekDay` respect JavaScript’s [`Date.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype).
 
 Only `day`, `month`, and `year` are necessary as input parameters for methods that require a date.
 
@@ -47,7 +47,7 @@ The object `options` may have the following properties:
 * `startDate`: current selected starting date (default `undefined`)
 * `endDate`: current selected ending date (default `undefined`)
 * `siblingMonths`: whether to include the previous and next months’ days before and after the current month when generating a calendar (default `false`)
-* `weekStart`: day of the week, respects [`Date.prorotype.getDay`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) (default `0`, Sunday)
+* `weekStart`: day of the week, respects [`Date.prototype.getDay`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) (default `0`, Sunday)
 
 
 #### `Calendar.interval( dateOne, dateTwo )`
@@ -80,7 +80,7 @@ false
 ```
 
 
-#### `Calendar.prorotype.getCalendar( year, month )`
+#### `Calendar.prototype.getCalendar( year, month )`
 
 Returns an `Array` of dates with the days from the given month, always starting at the configured week day.
 
@@ -97,12 +97,12 @@ If sibling months is disabled, paddings are added as `false` to align the week d
 ```
 
 
-#### `Calendar.prorotype.setDate( date )`
+#### `Calendar.prototype.setDate( date )`
 
 Alias to `Calendar.prototype.setStartDate`.
 
 
-#### `Calendar.prorotype.setStartDate( date )`
+#### `Calendar.prototype.setStartDate( date )`
 
 Sets the current selected starting date.
 
@@ -111,7 +111,7 @@ Sets the current selected starting date.
 ```
 
 
-#### `Calendar.prorotype.setEndDate( date )`
+#### `Calendar.prototype.setEndDate( date )`
 
 Sets the current selected ending date.
 
@@ -120,7 +120,7 @@ Sets the current selected ending date.
 ```
 
 
-#### `Calendar.prorotype.isDateSelected( date )`
+#### `Calendar.prototype.isDateSelected( date )`
 
 Checks wheter the given date is inside the selected dates interval, returns a `Boolean`.
 
