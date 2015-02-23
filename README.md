@@ -11,6 +11,10 @@ Base methods for generating calendars using JavaScript.
     cal.getCalendar( 2015, 0 );
     // Returns an Array with the calendar for January 2015.
 
+Usage with AMD and global variables are available through `dist/calendar-base.min.js`.
+
+Check `examples` for some simple use cases.
+
 
 ### Date object notation
 
