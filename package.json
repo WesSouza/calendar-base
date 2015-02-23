@@ -1,7 +1,8 @@
 {
   "name": "calendar-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Base methods for generating calendars using JavaScript.",
+  "keywords": [ "calendar", "generation", "base", "core" ],
   "main": "lib/calendar-base.js",
   "scripts": {
     "build": "cat lib/calendar-base.js | umd calendar-base --commonJS | uglifyjs > dist/calendar-base.min.js",
