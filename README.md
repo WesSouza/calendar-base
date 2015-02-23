@@ -4,12 +4,13 @@ Base methods for generating calendars using JavaScript.
 
 
 ## Usage
+```js
+var Calendar = require( 'calendar-base' ).Calendar,
+    cal = new Calendar();
 
-    var Calendar = require( 'calendar-base' ).Calendar,
-        cal = new Calendar();
-
-    cal.getCalendar( 2015, 0 );
-    // Returns an Array with the calendar for January 2015.
+cal.getCalendar( 2015, 0 );
+// Returns an Array with the calendar for January 2015.
+```
 
 Usage with AMD and global variables are available through `dist/calendar-base.min.js`.
 
@@ -19,15 +20,16 @@ Check `examples` for some simple use cases.
 ### Date object notation
 
 Every returned day or date argument follows this notation:
-
-    {
-        day: 1,
-        month: 0,
-        year: 1986,
-        weekDay: 0,
-        selected: false,
-        siblingMonth: false
-    }
+```js
+{
+    day: 1,
+    month: 0,
+    year: 1986,
+    weekDay: 0,
+    selected: false,
+    siblingMonth: false
+}
+```
 
 Properties `month` and `weekDay` respect JavaScript’s [`Date.prorotype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype).
 
