@@ -5,6 +5,15 @@ Base methods for generating calendars using JavaScript.
 Supports IE 6+, Chrome 1+, Firefox 3+, Safari 4+.
 
 
+## Installation
+
+```bash
+npm install calendar-base
+```
+
+Or manually copy `dist/calendar-base.min.js` to your project.
+
+
 ## Usage
 ```js
 var Calendar = require( 'calendar-base' ).Calendar,
@@ -14,7 +23,7 @@ cal.getCalendar( 2015, 0 );
 // Returns an Array with the calendar for January 2015.
 ```
 
-Usage with AMD and global variables are available through `dist/calendar-base.min.js`.
+Usage with AMD and global variables is available through `dist/calendar-base.min.js`.
 
 Check `examples` for some simple use cases.
 
