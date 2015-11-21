@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/WesleydeSouza/calendar-base"
   },
-  "tonicExampleFilename": "examples/node-js/sample-calendar.js",
+  "tonicExampleFilename": "examples/node-js/simple-calendar.js",
   "author": "Wesley de Souza <npm@wesley.so>",
   "license": "MIT",
   "devDependencies": {
