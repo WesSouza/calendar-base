@@ -127,4 +127,11 @@ describe( 'calendar-base', function ( ) {
 		done();
 	} );
 
+	it ( 'should return valid days in month', function( done ) {
+		assert.equal( Calendar.daysInMonth( 1988, 1 ), 29 );
+		assert.equal( Calendar.daysInMonth( 1988, 7 ), 31 );
+		assert.equal( Calendar.daysInMonth( 2015, 10 ), 30 );
+		done();
+	} );
+
 } );
