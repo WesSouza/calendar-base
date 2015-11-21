@@ -1,4 +1,4 @@
-var Calendar = require('../..').Calendar
+var Calendar = require('calendar-base').Calendar
 
 var calendar = new Calendar( { siblingMonths: false, weekStart: 1 } )
 var today = new Date()
@@ -17,4 +17,4 @@ calendar.getCalendar( today.getUTCFullYear(), today.getUTCMonth() ).forEach( fun
 	}
 } )
 
-console.log( 'This month‘s calendar\n', table.join( '  ' ) )
+console.log( 'This month’s calendar\n', table.join( '  ' ) )

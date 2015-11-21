@@ -25,7 +25,7 @@ cal.getCalendar( 2015, 0 );
 
 Usage with AMD and global variables is available through `dist/calendar-base.min.js`.
 
-Check `examples` for some simple use cases.
+[Check an online example](https://tonicdev.com/npm/calendar-base) or browse the `examples` folder for some simple use cases.
 
 
 ### Date object notation
