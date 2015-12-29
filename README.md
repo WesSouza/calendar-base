@@ -67,7 +67,7 @@ Returns the amount of days between `dateOne` and `dateTwo` as a `Number`.
 
 ```js
 > Calendar.interval({ year: 2010, month: 0, day: 1 }, { year: 2010, month: 0, day: 10 });
-11
+10
 ```
 
 
