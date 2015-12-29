@@ -73,6 +73,14 @@ describe('calendar-base', function () {
 		done();
 	});
 
+	it('should adjust the month number', function (done) {
+		var calendar = new Calendar(),
+			calendarDays = calendar.getCalendar(2010, 12);
+		assert.equal(calendarDays[15].month, 0);
+		assert.equal(calendarDays[15].year, 2011);
+		done();
+	});
+
 	it('should return valid date selection states for same month', function (done) {
 		var calendar = new Calendar();
 		calendar.setStartDate({ year: 2010, month: 0, day: 15 });
