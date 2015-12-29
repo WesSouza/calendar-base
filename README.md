@@ -61,6 +61,16 @@ The object `options` may have the following properties:
 * `weekStart`: day of the week, respects [`Date.prototype.getDay`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) (default `0`, Sunday)
 
 
+#### `Calendar.diff(dateOne, dateTwo)`
+
+Returns the difference in days between `dateOne` and `dateTwo` as a `Number`.
+
+```js
+> Calendar.diff({ year: 2010, month: 0, day: 1 }, { year: 2010, month: 0, day: 10 });
+-9
+```
+
+
 #### `Calendar.interval(dateOne, dateTwo)`
 
 Returns the amount of days between `dateOne` and `dateTwo` as a `Number`.

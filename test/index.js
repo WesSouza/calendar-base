@@ -116,6 +116,12 @@ describe('calendar-base', function () {
 		done();
 	});
 
+	it('should return valid date diffs', function (done) {
+		assert.equal(Calendar.diff({ year: 2016, month: 2, day: 1 }, { year: 2016, month: 1, day: 1 }), 29);
+		assert.equal(Calendar.diff({ year: 2010, month: 0, day: 1 }, { year: 2011, month: 0, day: 1 }), -365);
+		done();
+	});
+
 	it('should return valid date intervals', function (done) {
 		assert.equal(Calendar.interval({ year: 1986, month: 1, day: 16 }, { year: 1986, month: 1, day: 16 }), 1);
 		assert.equal(Calendar.interval({ year: 1986, month: 1, day: 10 }, { year: 1986, month: 2, day: 10 }), 29);
