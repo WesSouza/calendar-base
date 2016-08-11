@@ -81,6 +81,22 @@ Returns the amount of days between `dateOne` and `dateTwo` as a `Number`.
 ```
 
 
+#### `Calendar.compare(leftDate, rightDate)`
+
+Compares two date objects, returns:
+
+- `-1` if `leftDate` < `rightDate`
+- `0` if `leftDate` == `rightDate` 
+- `1` if `leftDate` > `rightDate`
+
+Useful for quick comparisons such as sorting an array of dates.
+
+```js
+> Calendar.compare({ year: 2010, month: 0, day: 1 }, { year: 2010, month: 0, day: 10 });
+1
+```
+
+
 #### `Calendar.daysInMonth(year, month)`
 
 Returns the amount of days in the given month as a `Number`.

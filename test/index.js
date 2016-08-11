@@ -141,6 +141,17 @@ describe('calendar-base', function () {
 		done();
 	});
 
+	it('should return valid date comparisons', function (done) {
+		assert.equal(Calendar.compare({ year: 2000, month: 0, day: 1 }, { year: 2000, month: 0, day: 1 }), 0);
+		assert.equal(Calendar.compare({ year: 2000, month: 0, day: 1 }, { year: 2000, month: 0, day: 2 }), -1);
+		assert.equal(Calendar.compare({ year: 2000, month: 0, day: 2 }, { year: 2000, month: 0, day: 1 }), 1);
+		assert.equal(Calendar.compare({ year: 2000, month: 0, day: 1 }, { year: 2000, month: 1, day: 1 }), -1);
+		assert.equal(Calendar.compare({ year: 2000, month: 1, day: 1 }, { year: 2000, month: 0, day: 1 }), 1);
+		assert.equal(Calendar.compare({ year: 2001, month: 0, day: 1 }, { year: 2000, month: 0, day: 1 }), 1);
+		assert.equal(Calendar.compare({ year: 2000, month: 0, day: 1 }, { year: 2001, month: 0, day: 1 }), -1);
+		done();
+	});
+
 	it('should set starting date', function (done) {
 		var calendar = new Calendar();
 		calendar.setStartDate({ year: 2010, month: 1, day: 15 });
