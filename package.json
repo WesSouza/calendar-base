@@ -1,6 +1,6 @@
 {
   "name": "calendar-base",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Base methods for generating calendars using JavaScript.",
   "keywords": [ "calendar", "generation", "base", "core" ],
   "main": "lib/calendar-base.js",
