@@ -1,5 +1,7 @@
 # Calendar Base [![Build Status](https://travis-ci.org/WesleydeSouza/calendar-base.svg?branch=master)](https://travis-ci.org/WesleydeSouza/calendar-base)
 
+[![NPM](https://nodei.co/npm/calendar-base.png)](https://nodei.co/npm/calendar-base/)
+
 Base methods for generating calendars using JavaScript.
 
 Supports IE 6+, Chrome 1+, Firefox 3+, Safari 4+.
