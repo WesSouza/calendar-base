@@ -1,54 +1,71 @@
-# Calendar Base [![Build Status](https://travis-ci.org/WesleydeSouza/calendar-base.svg?branch=master)](https://travis-ci.org/WesleydeSouza/calendar-base)
+# Calendar Base
 
-[![NPM](https://nodei.co/npm/calendar-base.png)](https://nodei.co/npm/calendar-base/)
+<a href="https://github.com/WesSouza/calendar-base/actions?query=branch%3Amaster+workflow%3A%22CI%20Tests"><img src="https://github.com/WesSouza/calendar-base/workflows/CI%20Tests/badge.svg" alt="Install, lint, test and build status badge"></a>
+
+[![npm](https://nodei.co/npm/calendar-base.png)](https://nodei.co/npm/calendar-base/)
 
 Base methods for generating calendars using JavaScript.
 
-Supports IE 6+, Chrome 1+, Firefox 3+, Safari 4+.
-
+Output is ES5 compatible.
 
 ## Installation
 
 ```bash
+# using npm
 npm install calendar-base
+
+# or yarn
+yarn add calendar-base
 ```
-
-Or manually copy `dist/calendar-base.min.js` to your project.
-
 
 ## Usage
-```js
-var Calendar = require('calendar-base').Calendar,
-    cal = new Calendar();
 
-cal.getCalendar(2015, 0);
-// Returns an Array with the calendar for January 2015.
+```js
+const Calendar = require('calendar-base').Calendar;
+const cal = new Calendar();
+
+cal.getCalendar(2020, 0);
+/*
+Returns an Array with the calendar for January 2020, including empty spaces for
+days from the previous and next months:
+
+[
+  false,
+  false,
+  { day: 1, weekDay: 3, month: 0, year: 2020 },
+  { day: 2, weekDay: 4, month: 0, year: 2020 },
+  { day: 3, weekDay: 5, month: 0, year: 2020 },
+  { day: 4, weekDay: 6, month: 0, year: 2020 },
+  { day: 5, weekDay: 0, month: 0, year: 2020 },
+  ...
+]
+*/
 ```
 
-Usage with AMD and global variables is available through `dist/calendar-base.min.js`.
-
-[Check an online example](https://tonicdev.com/npm/calendar-base) or browse the `examples` folder for some simple use cases.
-
+[Check an online example](https://npm.runkit.com/calendar-base) or browse the
+[`examples`](./examples/) folder for some simple use cases.
 
 ### Date object notation
 
 Every returned day or date argument follows this notation:
+
 ```js
 {
-    day: 14,
-    month: 9,
-    year: 1986,
-    weekDay: 4,
-    selected: false,
-    siblingMonth: false,
-    weekNumber: 42
+  day: 14,
+  month: 9,
+  year: 1986,
+  weekDay: 4,
+  selected: false,
+  siblingMonth: false,
+  weekNumber: 42
 }
 ```
 
-Properties `month` and `weekDay` respect JavaScript’s [`Date.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype).
+Properties `month` and `weekDay` respect JavaScript’s
+[`Date.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype).
 
-Only `day`, `month`, and `year` are necessary as input parameters for methods that require a date.
-
+Only `day`, `month`, and `year` are necessary as input parameters for methods
+that require a date.
 
 #### `Calendar(options)`
 
@@ -56,12 +73,13 @@ Constructor for a new calendar generator.
 
 The object `options` may have the following properties:
 
-* `startDate`: current selected starting date (default `undefined`)
-* `endDate`: current selected ending date (default `undefined`)
-* `siblingMonths`: whether to include the previous and next months’ days before and after the current month when generating a calendar (default `false`)
-* `weekNumbers`: whether to include the week number on each day
-* `weekStart`: day of the week, respects [`Date.prototype.getDay`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) (default `0`, Sunday)
-
+- `startDate`: current selected starting date (default `undefined`)
+- `endDate`: current selected ending date (default `undefined`)
+- `siblingMonths`: whether to include the previous and next months’ days before
+  and after the current month when generating a calendar (default `false`)
+- `weekNumbers`: whether to include the week number on each day
+- `weekStart`: day of the week, respects
+  [`Date.prototype.getDay`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) (default `0`, Sunday)
 
 #### `Calendar.diff(dateOne, dateTwo)`
 
@@ -72,7 +90,6 @@ Returns the difference in days between `dateOne` and `dateTwo` as a `Number`.
 -9
 ```
 
-
 #### `Calendar.interval(dateOne, dateTwo)`
 
 Returns the amount of days between `dateOne` and `dateTwo` as a `Number`.
@@ -82,13 +99,12 @@ Returns the amount of days between `dateOne` and `dateTwo` as a `Number`.
 10
 ```
 
-
 #### `Calendar.compare(leftDate, rightDate)`
 
 Compares two date objects, returns:
 
 - `-1` if `leftDate` < `rightDate`
-- `0` if `leftDate` == `rightDate` 
+- `0` if `leftDate` == `rightDate`
 - `1` if `leftDate` > `rightDate`
 
 Useful for quick comparisons such as sorting an array of dates.
@@ -97,7 +113,6 @@ Useful for quick comparisons such as sorting an array of dates.
 > Calendar.compare({ year: 2010, month: 0, day: 1 }, { year: 2010, month: 0, day: 10 });
 1
 ```
-
 
 #### `Calendar.daysInMonth(year, month)`
 
@@ -108,7 +123,6 @@ Returns the amount of days in the given month as a `Number`.
 31
 ```
 
-
 #### `Calendar.isLeapYear(year)`
 
 Returns whether the given year is a leap year, as a `Boolean`.
@@ -117,7 +131,6 @@ Returns whether the given year is a leap year, as a `Boolean`.
 > Calendar.isLeapYear(2100);
 false
 ```
-
 
 #### `Calendar.calculateWeekNumber(date)`
 
@@ -128,12 +141,14 @@ Returns the week number for the specified date.
 42
 ```
 
-
 #### `Calendar.prototype.getCalendar(year, month)`
 
-Returns an `Array` of dates with the days from the given month, always starting at the configured week day.
+Returns an `Array` of dates with the days from the given month, always starting
+at the configured week day.
 
-If sibling months is disabled, paddings are added as `false` to align the week days, otherwise the respective days from the previous or next months are included.
+If sibling months is disabled, paddings are added as `false` to align the week
+days, otherwise the respective days from the previous or next months are
+included.
 
 ```js
 > var cal = new Calendar({ siblingMonths: true });
@@ -145,11 +160,9 @@ If sibling months is disabled, paddings are added as `false` to align the week d
   { day: 4, weekDay: 6, month: 6, year: 2015, siblingMonth: true } ]
 ```
 
-
 #### `Calendar.prototype.setDate(date)`
 
 Alias to `Calendar.prototype.setStartDate`.
-
 
 #### `Calendar.prototype.setStartDate(date)`
 
@@ -159,7 +172,6 @@ Sets the current selected starting date.
 > cal.setStartDate({ year: 2015, month: 0, day: 1 });
 ```
 
-
 #### `Calendar.prototype.setEndDate(date)`
 
 Sets the current selected ending date.
@@ -168,22 +180,22 @@ Sets the current selected ending date.
 > cal.setEndDate({ year: 2015, month: 0, day: 31 });
 ```
 
-
 #### `Calendar.prototype.isDateSelected(date)`
 
-Checks wheter the given date is inside the selected dates interval, returns a `Boolean`.
+Checks whether the given date is inside the selected dates interval, returns a
+`Boolean`.
 
 ```js
 > cal.isDateSelected({ year: 2015, month: 0, day: 10 });
 true
 ```
 
-
 ## Important note on week numbers
 
-Week numbers are calculated based on the ISO 8601 standard, which assumes calculations based on weeks starting on Mondays. Be extra careful displaying the week number if your calendar doesn't start on a Monday.
-
+Week numbers are calculated based on the ISO 8601 standard, which assumes
+calculations based on weeks starting on Mondays. Be extra careful displaying the
+week number if your calendar doesn't start on a Monday.
 
 ## License
 
-MIT, http://wesleydesouza.mit-license.org/
+MIT, https://wes.dev/LICENSE.txt
