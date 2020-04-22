@@ -8,6 +8,33 @@ export interface CalendarDate {
   year: number;
 }
 
+export interface CalendarOptions {
+  /**
+   * Date object indicating the selected start date
+   */
+  startDate?: CalendarDate | null;
+
+  /**
+   * Date object indicating the selected end date
+   */
+  endDate?: CalendarDate | null;
+
+  /**
+   * Calculate dates from sibling months (before and after the current month, based on weekStart)
+   */
+  siblingMonths?: boolean;
+
+  /**
+   * Calculate the week days
+   */
+  weekNumbers?: boolean;
+
+  /**
+   * Day of the week to start the calendar, respects `Date.prototype.getDay` (defaults to `0`, Sunday)
+   */
+  weekStart?: number;
+}
+
 /**
  * Calendar object
  */
@@ -29,32 +56,7 @@ class Calendar {
     siblingMonths = false,
     weekNumbers = false,
     weekStart = 0,
-  }: {
-    /**
-     * Date object indicating the selected start date
-     */
-    startDate?: CalendarDate | null;
-
-    /**
-     * Date object indicating the selected end date
-     */
-    endDate?: CalendarDate | null;
-
-    /**
-     * Calculate dates from sibling months (before and after the current month, based on weekStart)
-     */
-    siblingMonths?: boolean;
-
-    /**
-     * Calculate the week days
-     */
-    weekNumbers?: boolean;
-
-    /**
-     * Day of the week to start the calendar, respects `Date.prototype.getDay` (defaults to `0`, Sunday)
-     */
-    weekStart?: number;
-  } = {}) {
+  }: CalendarOptions = {}) {
     this.startDate = startDate;
     this.endDate = endDate;
     this.siblingMonths = siblingMonths;
