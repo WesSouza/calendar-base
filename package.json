@@ -1,7 +1,7 @@
 {
   "name": "calendar-base",
   "description": "Base methods for generating calendars using JavaScript.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Wes Souza <hey@wes.dev> (https://wes.dev/)",
   "license": "MIT",
   "keywords": [
