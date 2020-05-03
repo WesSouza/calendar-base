@@ -1,8 +1,6 @@
 # Calendar Base
 
-<a href="https://github.com/WesSouza/calendar-base/actions?query=branch%3Amaster+workflow%3A%22CI%20Tests"><img src="https://github.com/WesSouza/calendar-base/workflows/CI%20Tests/badge.svg" alt="Install, lint, test and build status badge"></a>
-
-[![npm](https://nodei.co/npm/calendar-base.png)](https://nodei.co/npm/calendar-base/)
+[![CI Tests status badge](https://github.com/WesSouza/calendar-base/workflows/CI%20Tests/badge.svg)](https://github.com/WesSouza/calendar-base/actions?query=branch%3Amaster+workflow%3A%22CI+Tests%22) [![npm version](https://badge.fury.io/js/calendar-base.svg)](https://www.npmjs.com/package/calendar-base)
 
 Base methods for generating calendars using JavaScript.
 
