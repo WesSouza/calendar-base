@@ -20,6 +20,7 @@
   "files": [
     "dist"
   ],
+  "runkitExampleFilename": "examples/node-js/simple-calendar.js",
   "scripts": {
     "build": "tsdx build --name CalendarBase --format cjs,esm,umd",
     "lint": "tsdx lint src test",
