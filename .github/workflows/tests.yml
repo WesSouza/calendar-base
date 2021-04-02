@@ -11,14 +11,14 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-    name: Lint on node 12.x and ubuntu-latest
+    name: Lint on node 15.x and ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
+      - name: Use Node.js 15.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 15.x
 
       - name: Install deps and build
         run: yarn install
@@ -31,7 +31,7 @@ jobs:
 
     strategy:
       matrix:
-        node: ['10.x', '12.x', '13.x']
+        node: ['10.x', '12.x', '14.x', '15.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     name: Test on node ${{ matrix.node }} and ${{ matrix.os }}
