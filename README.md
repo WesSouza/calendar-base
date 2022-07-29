@@ -1,6 +1,6 @@
 # Calendar Base
 
-[![CI Tests status badge](https://github.com/WesSouza/calendar-base/workflows/CI%20Tests/badge.svg)](https://github.com/WesSouza/calendar-base/actions?query=branch%3Amaster+workflow%3A%22CI+Tests%22) [![npm version](https://badge.fury.io/js/calendar-base.svg)](https://www.npmjs.com/package/calendar-base)
+[![Lint, Type Check, Test, Build](https://github.com/WesSouza/calendar-base/actions/workflows/lint-typecheck-test-build.yml/badge.svg)](https://github.com/WesSouza/calendar-base/actions/workflows/lint-typecheck-test-build.yml) [![npm version](https://badge.fury.io/js/calendar-base.svg)](https://www.npmjs.com/package/calendar-base)
 
 Base methods for generating calendars using JavaScript.
 
@@ -193,6 +193,14 @@ true
 Week numbers are calculated based on the ISO 8601 standard, which assumes
 calculations based on weeks starting on Mondays. Be extra careful displaying the
 week number if your calendar doesn't start on a Monday.
+
+## Development
+
+This library uses `wes-cli`, which simplifies configuration setup. Instead of
+using `yarn install`, you should use `npx wes-cli install`, which will create
+all configuration files and run `yarn install`.
+
+[Read more about `wes-cli`.](https://github.com/WesSouza/wes-cli/#wes-install)
 
 ## License
 

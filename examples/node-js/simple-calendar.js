@@ -7,7 +7,7 @@ const table = [' Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', '\n'];
 
 calendar
   .getCalendar(today.getUTCFullYear(), today.getUTCMonth())
-  .forEach(function(date) {
+  .forEach(function (date) {
     if (date) {
       table.push((date.day < 10 ? ' ' : '') + date.day);
       if (date.weekDay == 0) {

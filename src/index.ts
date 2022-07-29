@@ -257,13 +257,13 @@ class Calendar {
    */
   static diff(dateLeft: CalendarDate, dateRight: CalendarDate) {
     const dateLeftDate = new Date(
-      Date.UTC(dateLeft.year, dateLeft.month, dateLeft.day, 0, 0, 0, 0)
+      Date.UTC(dateLeft.year, dateLeft.month, dateLeft.day, 0, 0, 0, 0),
     );
     const dateRightDate = new Date(
-      Date.UTC(dateRight.year, dateRight.month, dateRight.day, 0, 0, 0, 0)
+      Date.UTC(dateRight.year, dateRight.month, dateRight.day, 0, 0, 0, 0),
     );
     return Math.ceil(
-      (dateLeftDate.getTime() - dateRightDate.getTime()) / 86400000
+      (dateLeftDate.getTime() - dateRightDate.getTime()) / 86400000,
     );
   }
 
@@ -353,7 +353,7 @@ class Calendar {
   static calculateWeekNumber(date: CalendarDate) {
     // Creates the requested date
     const current = new Date(
-      Date.UTC(date.year, date.month, date.day, 0, 0, 0, 0)
+      Date.UTC(date.year, date.month, date.day, 0, 0, 0, 0),
     );
 
     // Create a copy of the object
