@@ -1,7 +1,7 @@
 import { Calendar } from '../src/index';
 
 describe('calendar-base', () => {
-  it('should return a valid calendar', function() {
+  it('should return a valid calendar', function () {
     const calendar = new Calendar();
     const calendarDays = calendar.getCalendar(1986, 9);
 
@@ -396,19 +396,19 @@ describe('calendar-base', () => {
     calendar.setStartDate({ year: 2010, month: 0, day: 15 });
     calendar.setEndDate({ year: 2010, month: 0, day: 17 });
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 14 })).toEqual(
-      false
+      false,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 16 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 17 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 18 })).toEqual(
-      false
+      false,
     );
   });
 
@@ -417,28 +417,28 @@ describe('calendar-base', () => {
     calendar.setStartDate({ year: 2010, month: 1, day: 15 });
     calendar.setEndDate({ year: 2010, month: 3, day: 15 });
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 15 })).toEqual(
-      false
+      false,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 1, day: 14 })).toEqual(
-      false
+      false,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 1, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 1, day: 16 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 2, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 3, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 3, day: 16 })).toEqual(
-      false
+      false,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 4, day: 15 })).toEqual(
-      false
+      false,
     );
   });
 
@@ -447,31 +447,31 @@ describe('calendar-base', () => {
     calendar.setStartDate({ year: 2010, month: 1, day: 15 });
     calendar.setEndDate({ year: 2012, month: 1, day: 15 });
     expect(calendar.isDateSelected({ year: 2010, month: 0, day: 15 })).toEqual(
-      false
+      false,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 1, day: 14 })).toEqual(
-      false
+      false,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 1, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2010, month: 11, day: 31 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2011, month: 0, day: 1 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2011, month: 1, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2011, month: 11, day: 31 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2012, month: 1, day: 15 })).toEqual(
-      true
+      true,
     );
     expect(calendar.isDateSelected({ year: 2012, month: 1, day: 16 })).toEqual(
-      false
+      false,
     );
   });
 
@@ -479,14 +479,14 @@ describe('calendar-base', () => {
     expect(
       Calendar.diff(
         { year: 2016, month: 2, day: 1 },
-        { year: 2016, month: 1, day: 1 }
-      )
+        { year: 2016, month: 1, day: 1 },
+      ),
     ).toEqual(29);
     expect(
       Calendar.diff(
         { year: 2010, month: 0, day: 1 },
-        { year: 2011, month: 0, day: 1 }
-      )
+        { year: 2011, month: 0, day: 1 },
+      ),
     ).toEqual(-365);
   });
 
@@ -494,44 +494,44 @@ describe('calendar-base', () => {
     expect(
       Calendar.interval(
         { year: 1986, month: 1, day: 16 },
-        { year: 1986, month: 1, day: 16 }
-      )
+        { year: 1986, month: 1, day: 16 },
+      ),
     ).toEqual(1);
     expect(
       Calendar.interval(
         { year: 1986, month: 1, day: 10 },
-        { year: 1986, month: 2, day: 10 }
-      )
+        { year: 1986, month: 2, day: 10 },
+      ),
     ).toEqual(29);
     expect(
       Calendar.interval(
         { year: 1986, month: 0, day: 1 },
-        { year: 1986, month: 11, day: 31 }
-      )
+        { year: 1986, month: 11, day: 31 },
+      ),
     ).toEqual(365);
     expect(
       Calendar.interval(
         { year: 1990, month: 0, day: 1 },
-        { year: 1990, month: 11, day: 31 }
-      )
+        { year: 1990, month: 11, day: 31 },
+      ),
     ).toEqual(365);
     expect(
       Calendar.interval(
         { year: 1996, month: 0, day: 1 },
-        { year: 1996, month: 11, day: 31 }
-      )
+        { year: 1996, month: 11, day: 31 },
+      ),
     ).toEqual(366);
     expect(
       Calendar.interval(
         { year: 2000, month: 0, day: 1 },
-        { year: 2000, month: 11, day: 31 }
-      )
+        { year: 2000, month: 11, day: 31 },
+      ),
     ).toEqual(366);
     expect(
       Calendar.interval(
         { year: 2100, month: 0, day: 1 },
-        { year: 2100, month: 11, day: 31 }
-      )
+        { year: 2100, month: 11, day: 31 },
+      ),
     ).toEqual(365);
   });
 
@@ -539,44 +539,44 @@ describe('calendar-base', () => {
     expect(
       Calendar.compare(
         { year: 2000, month: 0, day: 1 },
-        { year: 2000, month: 0, day: 1 }
-      )
+        { year: 2000, month: 0, day: 1 },
+      ),
     ).toEqual(0);
     expect(
       Calendar.compare(
         { year: 2000, month: 0, day: 1 },
-        { year: 2000, month: 0, day: 2 }
-      )
+        { year: 2000, month: 0, day: 2 },
+      ),
     ).toEqual(-1);
     expect(
       Calendar.compare(
         { year: 2000, month: 0, day: 2 },
-        { year: 2000, month: 0, day: 1 }
-      )
+        { year: 2000, month: 0, day: 1 },
+      ),
     ).toEqual(1);
     expect(
       Calendar.compare(
         { year: 2000, month: 0, day: 1 },
-        { year: 2000, month: 1, day: 1 }
-      )
+        { year: 2000, month: 1, day: 1 },
+      ),
     ).toEqual(-1);
     expect(
       Calendar.compare(
         { year: 2000, month: 1, day: 1 },
-        { year: 2000, month: 0, day: 1 }
-      )
+        { year: 2000, month: 0, day: 1 },
+      ),
     ).toEqual(1);
     expect(
       Calendar.compare(
         { year: 2001, month: 0, day: 1 },
-        { year: 2000, month: 0, day: 1 }
-      )
+        { year: 2000, month: 0, day: 1 },
+      ),
     ).toEqual(1);
     expect(
       Calendar.compare(
         { year: 2000, month: 0, day: 1 },
-        { year: 2001, month: 0, day: 1 }
-      )
+        { year: 2001, month: 0, day: 1 },
+      ),
     ).toEqual(-1);
   });
 

@@ -27,7 +27,7 @@ $calendarMonth.innerHTML = months[today.getUTCMonth()];
 
 calendar
   .getCalendar(today.getUTCFullYear(), today.getUTCMonth())
-  .forEach(function(date) {
+  .forEach(function (date) {
     const div = document.createElement('li');
     if (date) {
       div.className =
