@@ -1,4 +1,6 @@
-import { Calendar } from '../src/index';
+import { describe, expect, it } from 'vitest';
+
+import { Calendar } from '../src/index.js';
 
 describe('calendar-base', () => {
   it('should return a valid calendar', function () {
