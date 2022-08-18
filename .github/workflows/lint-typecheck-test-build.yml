@@ -22,7 +22,7 @@ jobs:
 
       - name: Install wes-cli
         run: |
-          npm i -g wes-cli@1.9.5
+          npm i -g wes-cli@1.10.1
           wes install
 
       - name: Use Node ${{ matrix.node }}
@@ -37,7 +37,7 @@ jobs:
         run: yarn check:types
 
       - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
+        run: yarn test:ci
 
       - name: Build
         run: yarn build

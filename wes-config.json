@@ -6,11 +6,11 @@
     "eslint-typescript",
     "github-codeql",
     "github-lint-typecheck-test-build",
-    "jest",
     "prettier",
     "rollup-lib",
     "typescript",
     "typescript-node",
+    "vitest",
     "vscode"
   ]
 }
