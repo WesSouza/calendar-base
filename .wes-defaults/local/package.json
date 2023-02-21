@@ -12,10 +12,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/WesleydeSouza/calendar-base"
+    "url": "https://github.com/WesSouza/calendar-base"
   },
   "files": [
     "dist"
-  ],
-  "runkitExampleFilename": "examples/node-js/simple-calendar.js"
+  ]
 }

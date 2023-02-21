@@ -40,8 +40,8 @@ days from the previous and next months:
 */
 ```
 
-[Check an online example](https://npm.runkit.com/calendar-base) or browse the
-[`examples`](./examples/) folder for some simple use cases.
+[Check an online example](https://stackblitz.com/edit/js-ad7edj?file=index.js)
+or browse the [`examples`](./examples/) folder for some simple use cases.
 
 ### Date object notation
 

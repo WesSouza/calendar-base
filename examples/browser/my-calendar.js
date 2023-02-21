@@ -1,4 +1,4 @@
-'use strict';
+import { Calendar } from 'https://cdn.skypack.dev/pin/calendar-base@v2.0.0-byfncDR1bnSqYGwdryci/mode=imports,min/optimized/calendar-base.js';
 
 const months = [
   'January',
@@ -15,7 +15,7 @@ const months = [
   'December',
 ];
 
-const calendar = new CalendarBase.Calendar({
+const calendar = new Calendar({
   siblingMonths: true,
   weekStart: true,
 });
