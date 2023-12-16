@@ -1,0 +1,71 @@
+{
+  "name": "calendar-base",
+  "description": "Base methods for generating calendars using JavaScript.",
+  "version": "2.0.1",
+  "author": "Wes Souza <hey@wes.dev> (https://wes.dev/)",
+  "license": "MIT",
+  "keywords": [
+    "calendar",
+    "generation",
+    "base",
+    "core"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WesSouza/calendar-base"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "build": "rollup -c .config/rollup.config.js",
+    "check:format": "prettier --config .config/.prettierrc --check ./src ./test",
+    "check:types": "tsc -p .config/tsconfig.json --noEmit",
+    "coverage": "vitest run -c .config/vite.config.ts --coverage",
+    "format": "prettier --config .config/.prettierrc --write ./src ./test",
+    "lint": "eslint -c .config/.eslintrc .",
+    "prepare": "yarn run build",
+    "test:ci": "vitest run -c .config/vite.config.ts --coverage",
+    "test:ui": "vitest watch -c .config/vite.config.ts --ui",
+    "test:watch": "vitest watch -c .config/vite.config.ts",
+    "test": "vitest run -c .config/vite.config.ts"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^18.19.3",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitest/coverage-c8": "^0.28.5",
+    "@vitest/ui": "^0.28.5",
+    "esbuild": "^0.17.19",
+    "eslint": "^8.56.0",
+    "import-sort-style-wes": "^3.0.2",
+    "prettier": "2.8.4",
+    "prettier-plugin-import-sort": "^0.0.7",
+    "rollup": "^3.29.4",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.5.1",
+    "vitest": "^0.28.5"
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "parser": "babylon",
+      "style": "wes"
+    },
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "wes"
+    }
+  }
+}
