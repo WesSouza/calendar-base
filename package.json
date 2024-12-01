@@ -43,8 +43,8 @@
     "@types/node": "^18.19.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@vitest/coverage-c8": "^0.28.5",
-    "@vitest/ui": "^0.28.5",
+    "@vitest/coverage-v8": "^2.1.6",
+    "@vitest/ui": "^2.1.6",
     "esbuild": "^0.17.19",
     "eslint": "^8.56.0",
     "import-sort-style-wes": "^3.0.2",
@@ -56,7 +56,7 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.5",
     "vite": "^5.1.8",
-    "vitest": "^0.28.5"
+    "vitest": "^2.1.6"
   },
   "importSort": {
     ".js, .jsx": {
